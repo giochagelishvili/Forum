@@ -1,0 +1,77 @@
+﻿@using Forum.Application.Users.Responses;
+@model List<UserResponseAdminModel>;
+
+@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<div class="d-flex flex-row align-items-center w-100 justify-content-between">
+    <h2>Users</h2>
+
+    <form method="post" asp-area="Admin" asp-action="GetByEmail" asp-controller="User">
+        <div class="d-flex flex-row align-items-center gap-2">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text">@@</span>
+                <input class="form-control" placeholder="Email" name="email" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+</div>
+
+<hr />
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Joined</th>
+                <th scope="col">Is Banned</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+
+                    @if (user.Gender == true)
+                    {
+                        <td>Male</td>
+                    }
+                    else if (user.Gender == false)
+                    {
+                        <td>Female</td>
+                    }
+                    else
+                    {
+                        <td>None</td>
+                    }
+
+                    <td>@user.CreatedAt</td>
+                    <td>@user.IsBanned</td>
+
+                    <td>
+                        <form asp-action="@(user.IsBanned ? "UnbanUser" : "BanUser")" method="post">
+                            <input hidden value="@user.Id" name="userId" />
+                            <button type="submit" class="btn @(user.IsBanned ? "btn-success" : "btn-danger")">@(user.IsBanned ? "Unban" : "Ban")</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No users found.</p>
+}

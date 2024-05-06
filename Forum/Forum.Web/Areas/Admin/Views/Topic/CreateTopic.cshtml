@@ -1,0 +1,28 @@
+﻿@using Forum.Application.Topics.Requests;
+@model TopicRequestPostModel;
+
+@{
+    ViewData["Title"] = "Create Topic";
+}
+
+<h2>Create New Topic</h2>
+
+<hr />
+
+<div class="col-md-4">
+    <div asp-validation-summary=All class="text-danger"></div>
+
+    <form asp-area="Admin" asp-controller="Topic" asp-action="CreateTopic" class="d-flex flex-column gap-4">
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" placeholder="e.g. .NET Development">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-dark">Create Topic</button>
+    </form>
+</div>

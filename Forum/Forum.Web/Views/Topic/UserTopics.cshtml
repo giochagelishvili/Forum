@@ -1,0 +1,87 @@
+﻿@using Forum.Application.Topics.Responses.Default;
+@using Forum.Domain;
+@model List<TopicResponseNewsFeedModel>;
+
+@{
+    ViewData["Title"] = "User's Topics";
+
+    var isMember = User?.IsInRole("Member");
+
+    var currentPage = ViewBag.CurrentPage;
+    var totalCount = ViewBag.TotalCount;
+    var itemsPerPage = ViewBag.ItemsPerPage;
+    var userId = ViewBag.UserId;
+}
+
+<div class="d-flex flex-row align-items-center w-100 justify-content-between">
+    <h2>User's Topics</h2>
+
+    <form method="post" asp-action="GetByEmail" asp-controller="Profile">
+        <div class="d-flex flex-row align-items-center gap-2">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text">@@</span>
+                <input class="form-control" placeholder="Email" name="email" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+</div>
+
+<hr />
+
+@if (Model != null && Model.Any())
+{
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @if (currentPage > 1)
+            {
+                <li class="page-item">
+                    <a asp-area="" asp-controller="Topic" asp-action="UserTopics" asp-route-userId="@userId" asp-route-page="@(currentPage - 1)" class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            }
+
+            <li class="page-item"><a class="page-link">@currentPage</a></li>
+
+            @if (currentPage * itemsPerPage < totalCount)
+            {
+                <li class="page-item">
+                    <a asp-area="" asp-controller="Topic" asp-action="UserTopics" asp-route-userId="@userId" asp-route-page="@(currentPage + 1)" class="page-link" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+
+    <div class="list-group gap-4">
+        @foreach (var topic in Model)
+        {
+            <a asp-area="@(isMember?.ToString() == "True" ? "User" : "")"
+               asp-action="Topic"
+               asp-controller="Topic"
+               asp-route-topicId="@topic.TopicId"
+               class="list-group-item list-group-item-action flex-column align-items-start border-top">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">@topic.TopicTitle</h5>
+                    @if (topic.TopicStatus == Status.Active)
+                    {
+                        <small class="text-success">@topic.TopicStatus.ToString()</small>
+                    }
+                    else
+                    {
+                        <small class="text-warning">@topic.TopicStatus.ToString()</small>
+                    }
+                </div>
+                <p class="mb-1">@topic.TopicDescription</p>
+                <small>Comments (@topic.CommentCount)</small>
+            </a>
+        }
+    </div>
+}
+else
+{
+    <p>No topics found.</p>
+}

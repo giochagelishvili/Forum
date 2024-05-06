@@ -1,0 +1,73 @@
+﻿@using System.Security.Claims;
+@using Forum.Application.Topics.Responses.Default;
+@using Forum.Domain;
+@model TopicResponseModel;
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h2>Topic</h2>
+
+<hr />
+
+<div class="d-flex flex-column align-items-center justify-content-start gap-4 w-100">
+    <div class="bg-secondary p-4 rounded-2 text-white w-100">
+        <div class="d-flex flex-row w-100 justify-content-between align-items-start">
+            <h1 class="display-4">@Model.Title</h1>
+
+            <a asp-area="" asp-controller="Profile" asp-action="Profile" asp-route-id="@Model.Author.Id" class="btn btn-outline-dark">@Model.Author.UserName</a>
+        </div>
+
+        <p class="lead">@Model.Description</p>
+
+        <hr class="my-4">
+
+        @if (Model.Status == Status.Active)
+        {
+            <p>Add Comment:</p>
+
+            <form class="d-flex flex-column gap-4" asp-action="Create" asp-controller="Comment">
+                <input hidden name="TopicId" value="@Model.Id" />
+
+                <textarea name="Body" class="form-control w-50 bg-dark text-white border-0 rounded-2" rows="4" placeholder="Write your thoughts..."></textarea>
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="p-2 bg-danger rounded-2">
+                        <p class="text-white m-0">@ViewBag.Error</p>
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-dark">Add Comment</button>
+            </form>
+        }
+        else
+        {
+            <p>You can't comment on inactive topic.</p>
+        }
+    </div>
+
+    @if (Model.Comments == null || Model.Comments.Count <= 0)
+    {
+        <div class="bg-secondary p-2 rounded-2 text-white w-75">
+            <p class="text-center m-0">This topic has no comments yet.</p>
+        </div>
+    }
+    else
+    {
+        @foreach (var comment in Model.Comments)
+        {
+            <div class="bg-secondary p-2 rounded-2 text-white w-75">
+                <p class="text-center m-0">@comment.Body</p>
+                <p class="text-center m-0">@comment.Author.UserName</p>
+                @if (comment.Author.UserName == User.Identity.Name)
+                {
+                    <form asp-action="Delete" asp-controller="Comment" asp-route-commentId="@comment.Id" asp-route-topicId="@Model.Id">
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                }
+            </div>
+        }
+    }
+</div>

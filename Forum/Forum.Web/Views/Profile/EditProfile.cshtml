@@ -1,0 +1,61 @@
+﻿@using Forum.Application.Users.Requests.Updates;
+@model UserRequestPutModel;
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h2>Update Profile Information</h2>
+
+<hr />
+
+<div class="col-md-4">
+    <div asp-validation-summary=All class="text-danger"></div>
+
+    <div class="d-flex flex-row align-items-center gap-2">
+        <form asp-action="Upload" asp-controller="Image" class="mb-4" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="control-label">Profile Picture</label>
+                <div class="input-group">
+                    <input type="file" name="image" class="form-control" aria-label="Upload" required>
+                    <button class="btn btn-outline-secondary" type="submit">Upload</button>
+                </div>
+            </div>
+        </form>
+
+        <a asp-action="Delete" asp-controller="Image" class="btn btn-danger">Delete</a>
+    </div>
+
+    <form asp-action="Update" class="d-flex flex-column gap-4">
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" placeholder="updated@example.com" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UpdatedUsername" class="control-label">Username</label>
+            <input asp-for="UpdatedUsername" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Gender" class="control-label"></label>
+            <div class="d-flex flex-row gap-3">
+                <select class="form-control" asp-for="Gender">
+                    <option selected disabled value="null">Choose</option>
+                    <option value="true">Male</option>
+                    <option value="false">Female</option>
+                </select>
+
+                <a asp-action="DeleteGender" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Bio"></label>
+            <textarea asp-for="Bio" class="form-control" rows="3" placeholder="Write your bio here..."></textarea>
+        </div>
+
+        <a asp-action="ChangePassword" class="btn btn-dark">Change Password</a>
+
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</div>

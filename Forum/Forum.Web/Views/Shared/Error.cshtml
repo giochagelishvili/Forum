@@ -1,0 +1,10 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<div class="text-center">
+    <h1 class="text-danger">Something went wrong.</h1>
+    <h2 class="text-danger">@Model.ErrorMessage</h2>
+    <img src="~/error.svg" width="400px" class="mt-5" />
+</div>

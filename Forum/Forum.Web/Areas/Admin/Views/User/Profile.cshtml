@@ -1,0 +1,54 @@
+﻿@using Forum.Application.Users.Responses;
+@model UserResponseAdminModel;
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h2>Profile</h2>
+
+<hr />
+
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="d-flex flex-column align-items-center gap-2 card p-4 w-50">
+        <div class="d-flex border border-1 flex-column justify-content-center align-items-center">
+            @if (Model.ImageUrl == null)
+            {
+                <img src="/resources/default.webp" height="100" width="100" />
+            }
+            else
+            {
+                <img src="@Model.ImageUrl" height="100" width="100" />
+            }
+        </div>
+
+        <span class="text-dark fw-bold">@Model.UserName</span>
+
+        @if (Model.Gender == true)
+        {
+            <span class="text-dark">Male</span>
+        }
+        else if (Model.Gender == false)
+        {
+            <span class="text-dark">Female</span>
+        }
+
+        <div class="d-flex flex-row align-items-center gap-2">
+            @if (User.Identity.Name == Model.UserName)
+            {
+                <a asp-controller="Profile" asp-action="EditProfile" class="btn btn-dark">Edit Profile</a>
+            }
+            else
+            {
+                <form asp-action="@(Model.IsBanned ? "UnbanUser" : "BanUser")" asp-route-userId="@Model.Id" method="post">
+                    <button type="submit" class="btn @(Model.IsBanned ? "btn-success" : "btn-danger")">@(Model.IsBanned ? "Unban" : "Ban")</button>
+                </form>
+            }
+
+            <a asp-area="Admin" asp-controller="Topic" asp-action="UserTopics" asp-route-userId="@Model.Id" class="btn btn-dark">See Topics</a>
+        </div>
+
+        <div class="px-2 rounded date">
+            <span class="join">Joined @Model.CreatedAt.ToString("MMM"), @Model.CreatedAt.Year</span>
+        </div>
+    </div>
+</div>

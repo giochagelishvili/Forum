@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\bin\Debug\net6.0\Forum.Application.deps.json
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\bin\Debug\net6.0\Forum.Application.dll
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\bin\Debug\net6.0\Forum.Application.pdb
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\bin\Debug\net6.0\Forum.Domain.dll
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\bin\Debug\net6.0\Forum.Domain.pdb
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.AssemblyInfo.cs
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.sourcelink.json
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Ap.87B758A4.Up2Date
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.dll
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\refint\Forum.Application.dll
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\Forum.Application.pdb
+C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Application\obj\Debug\net6.0\ref\Forum.Application.dll

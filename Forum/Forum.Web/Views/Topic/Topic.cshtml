@@ -1,0 +1,58 @@
+﻿@using Forum.Application.Topics.Responses.Default;
+@using System.Security.Claims
+@using Forum.Domain
+@model TopicResponseModel;
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h2>Topic</h2>
+
+<hr />
+
+<div class="d-flex flex-column align-items-center justify-content-start gap-4 w-100">
+    <div class="bg-secondary p-4 rounded-2 text-white w-100">
+        <div class="d-flex flex-row w-100 justify-content-between align-items-start">
+            <h1 class="display-4">@Model.Title</h1>
+
+            <a asp-action="Profile" asp-controller="Profile" asp-route-id="@Model.Author.Id" class="btn btn-outline-dark">@Model.Author.UserName</a>
+        </div>
+
+        <p class="lead">@Model.Description</p>
+
+        <hr class="my-4">
+
+        @if (Model.Status == Status.Active)
+        {
+            <p>You must be logged in to add a comment.</p>
+
+            <div class="d-flex flex-row gap-4 align-items-center">
+                <a asp-action="Login" asp-controller="Account" class="btn btn-primary">Login</a>
+
+                <a asp-action="Register" asp-controller="Account" class="btn btn-dark">Register</a>
+            </div>
+        }
+        else
+        {
+            <p>You can't comment on inactive topic.</p>
+        }
+    </div>
+
+    @if (Model.Comments == null || Model.Comments.Count <= 0)
+    {
+        <div class="bg-secondary p-2 rounded-2 text-white w-75">
+            <p class="text-center m-0">This topic has no comments yet.</p>
+        </div>
+    }
+    else
+    {
+        @foreach (var comment in Model.Comments)
+        {
+            <div class="bg-secondary p-2 rounded-2 text-white w-75">
+                <p class="text-center m-0">@comment.Body</p>
+                <p class="text-center m-0">@comment.Author.UserName</p>
+            </div>
+        }
+    }
+</div>

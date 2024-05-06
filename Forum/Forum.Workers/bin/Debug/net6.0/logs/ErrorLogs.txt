@@ -1,0 +1,48 @@
+2024-04-23 18:26:28.736 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-23 18:26:29.971 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:26:30.071 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:26:30.078 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:26:45.065 +04:00 [ERR] Exception of type 'System.Exception' was thrown.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at Forum.Workers.Bans.BanWorker.DoWork(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 37
+   at Forum.Workers.Bans.BanWorker.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Forum.Workers.Program.Main(String[] args) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Program.cs:line 38
+2024-04-23 18:28:26.087 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-23 18:28:27.450 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:28:27.518 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:28:27.528 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:28:35.082 +04:00 [ERR] Exception of type 'System.Exception' was thrown.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at Forum.Workers.Bans.BanWorker.DoWork(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 37
+   at Forum.Workers.Bans.BanWorker.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Forum.Workers.Program.Main(String[] args) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Program.cs:line 38
+2024-04-23 18:28:41.973 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-23 18:28:43.471 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:28:43.549 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:28:43.560 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:28:45.060 +04:00 [ERR] Exception of type 'System.Exception' was thrown.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at Forum.Workers.Bans.BanWorker.DoWork(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 37
+   at Forum.Workers.Bans.BanWorker.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Forum.Workers.Program.Main(String[] args) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Program.cs:line 38
+2024-04-23 18:35:11.021 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-23 18:35:12.883 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:35:12.967 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:35:12.983 +04:00 [INF] Entity Framework Core 6.0.29 initialized 'ForumContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.29' with options: None
+2024-04-23 18:35:15.050 +04:00 [ERR] Exception of type 'System.Exception' was thrown.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at Forum.Workers.Bans.BanWorker.DoWork(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 37
+   at Forum.Workers.Bans.BanWorker.ExecuteAsync(CancellationToken stoppingToken) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Bans\BanWorker.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Forum.Workers.Program.Main(String[] args) in C:\Users\user\Desktop\TBC IT Acadaemy\Homeworks\Forum.ItAcademy.Ge\Forum\Forum.Workers\Program.cs:line 38
